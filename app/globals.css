@@ -7,3 +7,7 @@
     @apply hover:underline cursor-pointer;
   }
 }
+
+.inputSection {
+  border: 1px solid #dfe1e5;
+}
