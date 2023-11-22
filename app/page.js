@@ -1,5 +1,16 @@
-import Image from "next/image";
-
 export default function Home() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div>
+      <header className="p-5 flex justify-between text-gray-700">
+        <div className="flex space-x-4 items-center">
+          <p className="link">About</p>
+          <p className="link">Store</p>
+        </div>
+        <div className="flex space-x-4 items-center">
+          <p className="link">Gmail</p>
+          <p className="link">Image</p>
+        </div>
+      </header>
+    </div>
+  );
 }
