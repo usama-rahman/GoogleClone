@@ -1,8 +1,8 @@
 import GoogleImg from "./Components/GoogleImg";
-import SearchIcon from "./Components/SearchIcon";
 import LeftNavItems from "./Components/LeftNavItems";
 import RightNavItems from "./Components/RightNavItems";
-import MicrophoneIcon from "./Components/MicrophoneIcon";
+import HeroBtn from "./Components/HeroBtn";
+import InputBox from "./Components/InputBox";
 
 export default function Home() {
   return (
@@ -14,12 +14,8 @@ export default function Home() {
 
       <form className="flex flex-col mt-44 items-center flex-grow">
         <GoogleImg />
-
-        <div className="flex w-full mt-5 hover:shadow-lg focus-within:shadow-lg max-w-md rounded-full items-center  px-5 py-3 sm:max-w-xl inputSection  lg:max-w-2xl ">
-          <SearchIcon />
-          <input type="text" className="focus:outline-none flex-grow " />
-          <MicrophoneIcon />
-        </div>
+        <InputBox />
+        <HeroBtn />
       </form>
     </div>
   );

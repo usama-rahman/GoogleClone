@@ -11,3 +11,11 @@
 .inputSection {
   border: 1px solid #dfe1e5;
 }
+.myBtn {
+  border: 1px solid #dfe1e5;
+  background-color: #ececee;
+}
+
+.myBtn:hover {
+  border: 1px solid #a1a4a7;
+}
