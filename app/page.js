@@ -3,10 +3,11 @@ import LeftNavItems from "./Components/LeftNavItems";
 import RightNavItems from "./Components/RightNavItems";
 import HeroBtn from "./Components/HeroBtn";
 import InputBox from "./Components/InputBox";
+import Footer from "./Components/Footer";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <header className="p-5 flex justify-between text-gray-700">
         <LeftNavItems />
         <RightNavItems />
@@ -17,6 +18,8 @@ export default function Home() {
         <InputBox />
         <HeroBtn />
       </form>
-    </div>
+
+      <Footer />
+    </>
   );
 }
