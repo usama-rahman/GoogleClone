@@ -2,7 +2,7 @@ import React from "react";
 
 function SearchIcon() {
   return (
-    <div>
+    <div className="mr-3">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
