@@ -7,15 +7,18 @@ import InputBox from "./Components/InputBox";
 import Footer from "./Components/Footer";
 
 import { useRef } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   const searchInputRef = useRef(null);
 
   const searchFnc = (e) => {
     e.preventDefault();
-
     const term = searchInputRef.current.value;
+
     if (!term) return;
+    router.push(`/search?term=${term}`);
   };
 
   return (
@@ -27,7 +30,7 @@ export default function Home() {
 
       <form className="flex flex-col mt-44 items-center flex-grow w-4/5">
         <GoogleImg />
-        <InputBox />
+        <InputBox searchInputRef={searchInputRef} />
         <HeroBtn searchFnc={searchFnc} />
       </form>
 
