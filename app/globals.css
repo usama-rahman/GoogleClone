@@ -19,3 +19,11 @@
 .myBtn:hover {
   border: 1px solid #a1a4a7;
 }
+
+.footerBottomBorder {
+  border-bottom: 1px solid #dadce0;
+}
+
+.footerBG {
+  background-color: #f2f2f2;
+}
