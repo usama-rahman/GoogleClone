@@ -7,19 +7,19 @@ import Footer from "./Components/Footer";
 
 export default function Home() {
   return (
-    <>
-      <header className="p-5 flex justify-between text-gray-700">
+    <div className="flex flex-col justify-center h-screen items-center ">
+      <header className=" w-full p-5 flex items-center justify-between text-gray-700">
         <LeftNavItems />
         <RightNavItems />
       </header>
 
-      <form className="flex flex-col mt-44 items-center flex-grow">
+      <form className="flex flex-col mt-44 items-center flex-grow w-4/5">
         <GoogleImg />
         <InputBox />
         <HeroBtn />
       </form>
 
       <Footer />
-    </>
+    </div>
   );
 }
