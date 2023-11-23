@@ -5,7 +5,6 @@ import RightNavItems from "./Components/RightNavItems";
 import HeroBtn from "./Components/HeroBtn";
 import InputBox from "./Components/InputBox";
 import Footer from "./Components/Footer";
-
 import { useRef } from "react";
 import { useRouter } from "next/navigation";
 
