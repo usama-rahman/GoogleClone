@@ -5,6 +5,16 @@ import { useRef } from "react";
 function SearchHeader() {
   const router = useRouter();
   const searchInputRef = useRef(null);
+
+  const search = (e) => {
+    e.preventDefault();
+
+    const term = searchInputRef.current.value;
+
+    if (!term) return;
+    router.push(`/search?term=${term}`);
+  };
+
   return (
     <div>
       <Image
@@ -48,7 +58,7 @@ function SearchHeader() {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 mr-3 hidden sm:inline-flex text-blue-500 border-l-2 pl-2 border-gray-300 "
+          className=" h-6 mr-3 hidden sm:inline-flex text-blue-500 border-l-2 pl-3 border-gray-300 "
         >
           <path
             strokeLinecap="round"
@@ -64,7 +74,7 @@ function SearchHeader() {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 text-blue-500 hidden sm:inline-flex  "
+          className=" h-6 text-blue-500 hidden sm:inline-flex  "
         >
           <path
             strokeLinecap="round"
@@ -72,6 +82,8 @@ function SearchHeader() {
             d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
           />
         </svg>
+
+        <button hidden type="submit" onClick={search}></button>
       </form>
     </div>
   );
