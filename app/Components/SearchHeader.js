@@ -1,6 +1,6 @@
 import GoogleSearchImg from "./GoogleSearchImg";
 import MicrophoneIconSerarch from "./MicrophoneIconSerarch";
-
+import Avater from "./Avatar";
 import SearchIconSearch from "./SearchIconSearch";
 import Xicon from "./Xicon";
 import { useRouter } from "next/navigation";
@@ -20,10 +20,9 @@ function SearchHeader() {
   };
 
   return (
-    <div>
+    <div className="flex items-center w-full p-6 ">
       <GoogleSearchImg />
-
-      <form className="flex border border-gray-200 rounded-full px-6 py-3 shadow-lg max-w-3xl items-center ">
+      <form className="flex flex-grow border border-gray-200 rounded-full px-6 py-3 shadow-lg max-w-3xl items-center ml-10 mr-5 ">
         <input
           ref={searchInputRef}
           className="w-full  focus:outline-none "
@@ -35,6 +34,7 @@ function SearchHeader() {
 
         <button hidden type="submit" onClick={search}></button>
       </form>
+      <Avater />
     </div>
   );
 }
